@@ -25,4 +25,12 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe "associations" do
+    it "has many lists" do
+      user = create(:user)
+
+      expect(user).to respond_to(:lists)
+    end
+  end
 end
