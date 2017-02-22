@@ -32,5 +32,11 @@ RSpec.describe User, type: :model do
 
       expect(user).to respond_to(:lists)
     end
+
+    it "has many articles" do
+      user = create(:user)
+
+      expect(user).to respond_to(:articles)
+    end
   end
 end

@@ -27,4 +27,18 @@ RSpec.describe Article, type: :model do
       end
     end
   end
+
+  describe "associations" do
+    it "has many listarticles" do
+      article = create(:article)
+
+      expect(article).to respond_to(:listarticles)
+    end
+
+    it "has many lists" do
+      article = create(:article)
+
+      expect(article).to respond_to(:lists)
+    end
+  end
 end
