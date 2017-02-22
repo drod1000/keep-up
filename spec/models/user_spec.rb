@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe User, type: :model do
   describe "validations" do
     context "invalid attributes" do
@@ -8,8 +10,8 @@ RSpec.describe User, type: :model do
       end
 
       it "has a unique username" do
-        user_1 = create(:user, name: "Daniel")
-        user_2 = User.new(name: "Daniel")
+        user_1 = create(:user, username: "Daniel")
+        user_2 = User.new(username: "Daniel")
 
         expect(user_2).to be_invalid
       end
@@ -17,7 +19,7 @@ RSpec.describe User, type: :model do
 
     context "valid attributes" do
       it "is valid with a username" do
-        user = User.new(name: "Daniel")
+        user = User.new(username: "Daniel")
 
         expect(user).to be_valid
       end
