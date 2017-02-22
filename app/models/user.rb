@@ -11,9 +11,9 @@ class User < ApplicationRecord
     user = User.find_by(email: oauth_data[:email])
     return user if user
     user = User.new
-    user.email = oauth_data.email
-    user.first_name = oauth_data.first_name
-    user.last_name = oauth_data.last_name
+    user.email = oauth_data[:email]
+    user.first_name = oauth_data[:first_name]
+    user.last_name = oauth_data[:last_name]
     user.save
   end
 end

@@ -51,4 +51,24 @@ RSpec.describe User, type: :model do
       expect(user).to respond_to(:articles)
     end
   end
+
+  describe "methods" do
+    context ".find_or_create_by_oauth" do
+      context "new user" do
+        it "creates a new user" do
+          expect{User.find_or_create_by_oauth(oauth_data)}.to change{User.count}.from(0).to(1)
+        end
+      end
+      context "existing user" do
+        it "does not create a new user" do
+          create(:user, email: oauth_data[:email])
+          expect{User.find_or_create_by_oauth(oauth_data)}.to_not change{User.count}
+        end
+      end
+    end
+  end
+
+  def oauth_data
+    {email: "d@d.com", first_name: "Daniel", last_name: "Rodriguez"}
+  end
 end
