@@ -15,5 +15,6 @@ class User < ApplicationRecord
     user.first_name = oauth_data[:first_name]
     user.last_name = oauth_data[:last_name]
     user.save
+    user
   end
 end
