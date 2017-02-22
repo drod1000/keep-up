@@ -26,7 +26,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "associatons" do
+  describe "associations" do
     it "has many lists" do
       user = create(:user)
 
