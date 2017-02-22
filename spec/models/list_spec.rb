@@ -24,7 +24,7 @@ RSpec.describe List, type: :model do
     it "has many articlelists" do
       list = create(:list)
 
-      expect(list).to respond_to(:articlelists)
+      expect(list).to respond_to(:listarticles)
     end
 
     it "has many articles" do
