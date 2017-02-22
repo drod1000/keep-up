@@ -12,7 +12,7 @@ RSpec.describe List, type: :model do
 
     context "valid attributes" do
       it "is valid with a name" do
-        user = List.new(name: "Daniel")
+        list = List.new(name: "Name")
 
         expect(list).to be_valid
       end
