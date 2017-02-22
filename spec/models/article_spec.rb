@@ -41,4 +41,5 @@ RSpec.describe Article, type: :model do
       expect(article).to respond_to(:lists)
     end
   end
+
 end

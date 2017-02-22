@@ -4,4 +4,5 @@ class Article < ApplicationRecord
 
   has_many :listarticles
   has_many :lists, through: :listarticles
+
 end
