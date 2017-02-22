@@ -3,23 +3,23 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe "validations" do
     context "invalid attributes" do
-      it "is invalid without a username" do
+      it "is invalid without an email" do
         user = User.new
 
         expect(user).to be_invalid
       end
 
-      it "has a unique username" do
-        user_1 = create(:user, username: "Daniel")
-        user_2 = User.new(username: "Daniel")
+      it "has a unique email" do
+        user_1 = create(:user, email: "d@d.com")
+        user_2 = User.new(email: "d@d.com")
 
         expect(user_2).to be_invalid
       end
     end
 
     context "valid attributes" do
-      it "is valid with a username" do
-        user = User.new(username: "Daniel")
+      it "is valid with an email" do
+        user = User.new(email: "d@d.com")
 
         expect(user).to be_valid
       end
