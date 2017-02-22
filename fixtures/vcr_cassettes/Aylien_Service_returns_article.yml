@@ -27,7 +27,7 @@ http_interactions:
       Server:
       - openresty/1.9.3.2
       Date:
-      - Wed, 22 Feb 2017 15:39:10 GMT
+      - Wed, 22 Feb 2017 16:07:56 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -37,7 +37,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '990'
+      - '988'
       X-Ratelimit-Reset:
       - '1487808000'
       Access-Control-Allow-Origin:
@@ -254,5 +254,5 @@ http_interactions:
         TGFrZXJzIHByb21vdGUgTWFnaWMsIHdpbGwgbmFtZSBQZWxpbmthIEdNIiwK
         ICAicHVibGlzaERhdGUiOiAiIiwKICAiZmVlZHMiOiBbXQp9
     http_version: 
-  recorded_at: Wed, 22 Feb 2017 15:39:08 GMT
+  recorded_at: Wed, 22 Feb 2017 16:07:55 GMT
 recorded_with: VCR 3.0.3
