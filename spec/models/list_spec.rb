@@ -18,4 +18,12 @@ RSpec.describe List, type: :model do
       end
     end
   end
+
+  describe "associations" do
+    it "belongs to a user" do
+      list = create(:list)
+
+      expect(list).to respond_to(:user)
+    end
+  end
 end
