@@ -4,7 +4,19 @@ RSpec.describe User, type: :model do
   describe "validations" do
     context "invalid attributes" do
       it "is invalid without an email" do
-        user = User.new
+        user = User.new(first_name: "Daniel", last_name: "Rodriguez")
+
+        expect(user).to be_invalid
+      end
+
+      it "is invalid without a first name" do
+        user = User.new(email: "d@d.com", last_name: "Rodriguez")
+
+        expect(user).to be_invalid
+      end
+
+      it "is invalid without a last name" do
+        user = User.new(email: "d@d.com", first_name: "Daniel")
 
         expect(user).to be_invalid
       end
@@ -18,8 +30,8 @@ RSpec.describe User, type: :model do
     end
 
     context "valid attributes" do
-      it "is valid with an email" do
-        user = User.new(email: "d@d.com")
+      it "is valid with all attributes" do
+        user = User.new(email: "d@d.com", first_name: "Daniel", last_name: "Rodriguez")
 
         expect(user).to be_valid
       end
