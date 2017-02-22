@@ -1,6 +1,10 @@
 class ListsController < ApplicationController
   def index
-    @user = User.find(params["user_id"])
-    @list = List.new(user_id: @user.id)
+    if current_user.id == params[:user_id].to_i
+      @list = List.new(user_id: current_user.id)
+      render :index
+    else
+      render file: "/public/404"
+    end
   end
 end
