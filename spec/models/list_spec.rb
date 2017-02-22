@@ -21,7 +21,7 @@ RSpec.describe List, type: :model do
   end
 
   describe "associations" do
-    it "has many articlelists" do
+    it "has many listarticles" do
       list = create(:list)
 
       expect(list).to respond_to(:listarticles)
