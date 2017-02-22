@@ -43,6 +43,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.7.2)
       execjs
+    aylien_text_api (0.7.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -224,6 +225,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aylien_text_api
   bootstrap-sass (~> 3.3.6)
   capybara
   coffee-rails (~> 4.2)

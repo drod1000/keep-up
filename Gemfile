@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'faraday'
+gem 'aylien_text_api'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
