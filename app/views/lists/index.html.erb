@@ -1,8 +1,8 @@
 <h1>All Lists</h1>
 <div class="lists-table">
-  <form>
+  <form id="<%= current_user.id %>">
   <input type="text" name="list" placeholder="Add new list..." required />
-    <button type="sub" id="<%= current_user.id %>">Add List</button>
+    <button type="sub">Add List</button>
   </form>
   <ul>
     <% current_user.lists.each do |list| %>
