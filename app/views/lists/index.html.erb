@@ -1,4 +1,12 @@
 <h1>All Lists</h1>
-<% current_user.lists.each do |list| %>
-  <%= list.name %>
-<% end %>
+<div class="lists-table">
+  <form>
+  <input type="text" name="list" placeholder="Add new list..." required />
+    <button type="sub" id="<%= current_user.id %>">Add List</button>
+  </form>
+  <ul>
+    <% current_user.lists.each do |list| %>
+      <li><%= list.name %></li>
+    <% end %>
+  </ul>
+</div>
