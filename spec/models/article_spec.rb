@@ -50,6 +50,9 @@ RSpec.describe Article, type: :model do
           article = Article.create_with_aylien(url)
 
           expect(article).to be_an(Article)
+          expect(article.title).not_to be_empty
+          expect(article.author).not_to be_empty
+          expect(article.body).not_to be_empty
         end
       end
     end
