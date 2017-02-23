@@ -5,7 +5,10 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Login", google_login_path %></li>
+      <% if current_user %>
+        <li>Logged in as <%= current_user.first_name %></li>
+        <li><%= link_to "Logout", logout_path %></li>
+      <% end %>
     </ul>
   </div>
 </nav>

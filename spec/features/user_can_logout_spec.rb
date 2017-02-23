@@ -5,7 +5,7 @@ describe "A logged in user" do
     user = create(:user)
     page.set_rack_session(user_id: user.id)
 
-    visit profile_path(user)
+    visit user_path(user)
     expect(page).to have_content("Logout")
   end
 end
