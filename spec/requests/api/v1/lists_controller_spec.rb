@@ -9,6 +9,8 @@ describe "Lists API" do
     invoice = invoices.first
 
     expect(response).to be_success
+    expect(response.status).to eq(201)
+
     expect(List.count).to eq(1)
     expect(user.lists.count).to eq(1)
 
