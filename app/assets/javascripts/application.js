@@ -10,7 +10,10 @@ $(document).ready(function(){
 
     $.ajax({
       type: 'POST',
-      url: '/api/v1/lists?list_name=' + listName
+      url: '/api/v1/lists?list_name=' + listName,
+      success: function(json) {
+        location.reload(true);
+      }
     });
   });
 });
