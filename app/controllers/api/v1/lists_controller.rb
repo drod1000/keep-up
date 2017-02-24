@@ -1,4 +1,4 @@
-class Api::V1::ListsController < ActionController::Base
+class Api::V1::ListsController < Api::V1::BaseController
   helper_method :current_user
   add_flash_types :success, :info, :warning, :danger
 
