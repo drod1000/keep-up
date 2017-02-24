@@ -56,6 +56,7 @@ group :development do
 end
 
 group :test do
+  gem 'selenium-webdriver', '~> 2.53.4'
   gem 'rack_session_access'
   gem 'vcr'
   gem 'webmock'
