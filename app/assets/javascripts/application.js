@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
 
-  $('form').on('submit', function(){
+  $('.list-form').on('submit', function(){
 
     var list = $('form input');
     var listName = list.val();
