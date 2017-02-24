@@ -1,0 +1,52 @@
+.lists-table, .list-table{
+    position: relative;
+    width: 95%;
+    background: #c1bdbd;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+  form{
+
+    input[type="text"]{
+      width: 70%;
+      padding: 20px;
+      background: white;
+      border: 0;
+      float: left;
+      font-size: 20px;
+      color: #989898;
+    }
+
+    button{
+      padding: 20px;
+      width: 30%;
+      float: left;
+      background: #858585;
+      border: 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li{
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      font-family: arial;
+      font-size: 20px;
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+    a{
+    color: #ffffff;
+    }
+  }
+}

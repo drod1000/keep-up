@@ -1,2 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "sections/tables/list";
+
+body{
+  background: skyblue;
+  font-family: verdana;
+  color: #fff;
+  padding: 30px;
+}
+h1{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
