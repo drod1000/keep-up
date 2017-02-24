@@ -6,7 +6,7 @@
   </form>
   <ul>
     <% current_user.lists.each do |list| %>
-      <li><%= list.name %></li>
+      <li><%= link_to list.name, user_list_path(current_user, list) %></li>
     <% end %>
   </ul>
 </div>
