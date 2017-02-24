@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "When a user visits '/user_lists'" , js: true do
+describe "When a user visits user_lists index page", js: true do
   it "they can create a new list" do
       user = create(:user)
       page.set_rack_session(user_id: user.id)
