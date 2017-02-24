@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe "When a user visits '/user_lists'" , js: true do
   it "they can create a new list" do
-    # VCR.use_cassette("user creates a new list") do
       user = create(:user)
       page.set_rack_session(user_id: user.id)
 
@@ -15,6 +14,5 @@ describe "When a user visits '/user_lists'" , js: true do
 
       expect(current_path).to eq(user_lists_path(user))
       expect(page).to have_content('new list')
-    # end
   end
 end
