@@ -3,6 +3,8 @@ require 'rails_helper'
 describe "Lists API" do
   it "can create a list" do
     user = create(:user)
+    allow_any_instance_of(Api::V1::ListsController).to receive(:current_user).and_return(user)
+
     post "/api/v1/lists/?user_id=#{user.id}&list_name=some_list"
 
     invoices = JSON.parse(response.body)

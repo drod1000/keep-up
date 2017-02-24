@@ -7,11 +7,10 @@ $(document).ready(function(){
 
     var list = $('form input');
     var listName = list.val();
-    var userId = $(this).attr('id')
 
     $.ajax({
       type: 'POST',
-      url: '/api/v1/lists?user_id=' + userId + '&list_name=' + listName
+      url: '/api/v1/lists?list_name=' + listName
     });
   });
 });
