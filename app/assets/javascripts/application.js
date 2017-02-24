@@ -15,4 +15,18 @@ $(document).ready(function(){
       location.reload();
     });
   });
+
+  $('.article-form').on('submit', function(){
+    var article = $('form input');
+    var articleUrl = article.val();
+    var listId = $(this).attr('id');
+    url = '/api/v1/articles?list_id=' + listId + '&url=' + articleUrl;
+    console.log(url);
+    $.ajax({
+      type: 'POST',
+      url: '/api/v1/articles?list_id=' + listId + '&url=' + articleUrl
+    }).done(function(response){
+      location.reload();
+    });
+  });
 });
