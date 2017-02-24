@@ -5,8 +5,8 @@ class Article < ApplicationRecord
   has_many :list_articles
   has_many :lists, through: :list_articles
 
-  def self.create_with_aylien(url)
-    article = Article.create(url: url)
+  def self.create_with_aylien(list, url)
+    article = list.articles.create(url: url)
     attributes = AylienService.extract(url)
     article.update(title: attributes[:title])
     article.update(author: attributes[:author])
