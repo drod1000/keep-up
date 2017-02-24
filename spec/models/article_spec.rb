@@ -60,10 +60,12 @@ RSpec.describe Article, type: :model do
 
     context "#convert_to_speech" do
       it "converts body to speech" do
-        article = create(:article)
-        mp3 = article.convert_to_speech
+        VCR.use_cassette("convert article to speech") do
+          article = create(:article)
+          mp3 = article.convert_to_speech
 
-        expect(mp3.content_type).to eq("audio/mpeg")
+          expect(mp3.content_type).to eq("audio/mpeg")
+        end
       end
     end
   end
