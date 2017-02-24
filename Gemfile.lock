@@ -267,7 +267,7 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)
-  selenium-webdriver (~> 2.53.4)
+  selenium-webdriver
   shoulda-matchers
   simplecov
   tzinfo-data
