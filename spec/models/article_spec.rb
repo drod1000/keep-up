@@ -57,6 +57,15 @@ RSpec.describe Article, type: :model do
         end
       end
     end
+
+    context "#convert_to_speech" do
+      it "converts body to speech" do
+        article = create(:article)
+        mp3 = article.convert_to_speech
+
+        expect(mp3.content_type).to eq("audio/mpeg")
+      end
+    end
   end
 
 end
