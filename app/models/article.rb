@@ -14,4 +14,8 @@ class Article < ApplicationRecord
     article.save
     article
   end
+
+  def convert_to_speech
+    AwsService.text_to_speech(body)
+  end
 end
