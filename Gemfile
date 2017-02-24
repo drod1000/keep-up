@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'faraday'
 gem 'aylien_text_api'
+gem 'aws-sdk'
 gem 'omniauth-google-oauth2'
 
 # Use Capistrano for deployment
