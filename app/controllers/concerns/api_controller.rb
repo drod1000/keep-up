@@ -1,6 +1,4 @@
-class ApplicationController < ApiController
-  protect_from_forgery with: :exception
-
+class ApiController < ActionController::Base
   helper_method :current_user
   add_flash_types :success, :info, :warning, :danger
 
