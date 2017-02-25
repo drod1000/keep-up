@@ -2,7 +2,7 @@ class Article < ApplicationRecord
   validates :url, presence: true
   validates :url, uniqueness: true
 
-  has_many :list_articles
+  has_many :list_articles, dependent: :destroy
   has_many :lists, through: :list_articles
 
   def self.create_with_aylien(list, url)

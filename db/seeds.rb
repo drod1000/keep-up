@@ -1,10 +1,11 @@
+User.destroy_all
+List.destroy_all
+Article.destroy_all
+
 class Seed
 
   def self.start
     seed = Seed.new
-    User.delete_all
-    List.delete_all
-    Article.delete_all
     seed.generate_users_and_lists
     seed.generate_articles
     seed.articles_into_lists
@@ -28,7 +29,7 @@ class Seed
   end
 
   def generate_articles
-    50.times do
+    250.times do
       Article.create!(
         url:      Faker::Internet.url,
         title:    Faker::Name.title,
@@ -39,7 +40,7 @@ class Seed
   end
 
   def articles_into_lists
-    List.each do |list|
+    List.all.each do |list|
       articles = Article.all.sample(10)
       articles.each do |article|
         list.articles << article

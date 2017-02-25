@@ -4,7 +4,7 @@ class User < ApplicationRecord
             :last_name, presence: true
   validates :email, uniqueness: true
 
-  has_many :lists
+  has_many :lists, dependent: :destroy
   has_many :articles, through: :lists
 
   def self.find_or_create_by_oauth(oauth_data)
