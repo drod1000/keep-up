@@ -11,8 +11,9 @@ class AwsService
     client.synthesize_speech(hash)
   end
 
-  def self.export_to_s3
+  def self.export_to_s3(mp3)
     client = Aws::S3::Client.new(
     region: 'us-east-1')
+    client.put_object(bucket: 'keep-up', key: 'test', body: mp3)
   end
 end
