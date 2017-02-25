@@ -12,4 +12,18 @@ RSpec.describe "AWS Service" do
       end
     end
   end
+
+  context ".export_to_s3" do
+    it "can export files to s3" do
+      VCR.use_cassette("AWS Service exports audio to S3") do
+        text = "This text just got converted to speech!"
+        name = "test"
+
+        mp3 = AwsService.text_to_speech(text)
+        response = AwsService.export_to_s3(mp3.audio_stream, name)
+
+        expect(response[:etag]).to_not be_empty
+      end
+    end
+  end
 end
