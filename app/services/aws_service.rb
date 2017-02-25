@@ -14,6 +14,6 @@ class AwsService
   def self.export_to_s3(mp3)
     client = Aws::S3::Client.new(
     region: 'us-east-1')
-    client.put_object(bucket: 'keep-up', key: 'test', body: mp3)
+    client.put_object(bucket: 'keep-up', key: 'test', body: mp3, content_type: 'audio/mpeg')
   end
 end
