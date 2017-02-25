@@ -10,7 +10,7 @@ class Article < ApplicationRecord
     attributes = AylienService.extract(url)
     article.update(title: attributes[:title])
     article.update(author: attributes[:author])
-    article.update(body: attributes[:article])
+    article.update(body: attributes[:article].gsub!("\n",''))
     article.save
     article
   end

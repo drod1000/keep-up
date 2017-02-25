@@ -56,29 +56,4 @@ RSpec.describe Article, type: :model do
       end
     end
   end
-
-  describe "#clean body" do
-    it "can clean extracted text" do
-      text = "President Donald Trump would like the US to be \"at the top of the pack\" when it comes to having nuclear weapons.\n\nThe statement, in an interview with Reuters Thursday, left non-proliferation experts puzzled and concerned.\n\n"
-      total_chars = text.chars.count
-
-      article = create(:article, body: text)
-
-      article.clean_body
-      new_body = article.body
-      expect(new_body.chars.count).to eq(total_chars - 8)
-    end
-  end
-
-  describe "#convert_to_speech" do
-    it "converts body to speech" do
-      VCR.use_cassette("convert article to speech") do
-        article = create(:article)
-        mp3 = article.convert_to_speech
-
-        expect(mp3.content_type).to eq("audio/mpeg")
-      end
-    end
-  end
-
 end
