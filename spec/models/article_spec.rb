@@ -42,30 +42,41 @@ RSpec.describe Article, type: :model do
     end
   end
 
-  describe "methods" do
-    context ".create_with_aylien" do
-      it "creates an article with text given url" do
-        VCR.use_cassette("create article from Aylien Service") do
-          url = "http://www.si.com/nba/2017/02/22/nba-trade-deadline-burning-questions-jimmy-butler-celtics-bulls"
-          list = create(:list)
-          article = Article.create_with_aylien(list, url)
+  describe ".create_with_aylien" do
+    it "creates an article with text given url" do
+      VCR.use_cassette("create article from Aylien Service") do
+        url = "http://www.si.com/nba/2017/02/22/nba-trade-deadline-burning-questions-jimmy-butler-celtics-bulls"
+        list = create(:list)
+        article = Article.create_with_aylien(list, url)
 
-          expect(article).to be_an(Article)
-          expect(article.title).not_to be_empty
-          expect(article.author).not_to be_empty
-          expect(article.body).not_to be_empty
-        end
+        expect(article).to be_an(Article)
+        expect(article.title).not_to be_empty
+        expect(article.author).not_to be_empty
+        expect(article.body).not_to be_empty
       end
     end
+  end
 
-    context "#convert_to_speech" do
-      it "converts body to speech" do
-        VCR.use_cassette("convert article to speech") do
-          article = create(:article)
-          mp3 = article.convert_to_speech
+  describe "#clean body" do
+    it "can clean extracted text" do
+      text = "President Donald Trump would like the US to be \"at the top of the pack\" when it comes to having nuclear weapons.\n\nThe statement, in an interview with Reuters Thursday, left non-proliferation experts puzzled and concerned.\n\n"
+      total_chars = text.chars.count
 
-          expect(mp3.content_type).to eq("audio/mpeg")
-        end
+      article = create(:article, body: text)
+
+      article.clean_body
+      new_body = article.body
+      expect(new_body.chars.count).to eq(total_chars - 8)
+    end
+  end
+
+  describe "#convert_to_speech" do
+    it "converts body to speech" do
+      VCR.use_cassette("convert article to speech") do
+        article = create(:article)
+        mp3 = article.convert_to_speech
+
+        expect(mp3.content_type).to eq("audio/mpeg")
       end
     end
   end
