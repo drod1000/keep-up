@@ -42,32 +42,29 @@ RSpec.describe Article, type: :model do
     end
   end
 
-  describe "methods" do
-    context ".create_with_aylien" do
-      it "creates an article with text given url" do
-        VCR.use_cassette("create article from Aylien Service") do
-          url = "http://www.si.com/nba/2017/02/22/nba-trade-deadline-burning-questions-jimmy-butler-celtics-bulls"
-          list = create(:list)
-          article = Article.create_with_aylien(list, url)
+  describe ".create_with_aylien" do
+    it "creates an article with text given url" do
+      VCR.use_cassette("create article from Aylien Service") do
+        url = "http://www.si.com/nba/2017/02/22/nba-trade-deadline-burning-questions-jimmy-butler-celtics-bulls"
+        list = create(:list)
+        article = Article.create_with_aylien(list, url)
 
-          expect(article).to be_an(Article)
-          expect(article.title).not_to be_empty
-          expect(article.author).not_to be_empty
-          expect(article.body).not_to be_empty
-        end
-      end
-    end
-
-    context "#convert_to_speech" do
-      it "converts body to speech" do
-        VCR.use_cassette("convert article to speech") do
-          article = create(:article)
-          mp3 = article.convert_to_speech
-
-          expect(mp3.content_type).to eq("audio/mpeg")
-        end
+        expect(article).to be_an(Article)
+        expect(article.title).not_to be_empty
+        expect(article.author).not_to be_empty
+        expect(article.body).not_to be_empty
       end
     end
   end
 
+  describe "#convert_to_speech" do
+    it "converts body to speech" do
+      VCR.use_cassette("convert article to speech") do
+        article = create(:article)
+        mp3 = article.convert_to_speech
+
+        expect(mp3.content_type).to eq("audio/mpeg")
+      end
+    end
+  end
 end
