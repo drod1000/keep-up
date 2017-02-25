@@ -4,11 +4,11 @@
 $(document).ready(function(){
 
   $('.list-form').on('submit', function(){
-
+    event.preventDefault();
     var list = $('form input');
     var listName = list.val();
 
-    $.ajax({
+    return $.ajax({
       type: 'POST',
       url: '/api/v1/lists?list_name=' + listName
     }).done(function(response){
@@ -17,12 +17,12 @@ $(document).ready(function(){
   });
 
   $('.article-form').on('submit', function(){
+    event.preventDefault();
     var article = $('form input');
     var articleUrl = article.val();
     var listId = $(this).attr('id');
-    url = '/api/v1/articles?list_id=' + listId + '&url=' + articleUrl;
-    console.log(url);
-    $.ajax({
+
+    return $.ajax({
       type: 'POST',
       url: '/api/v1/articles?list_id=' + listId + '&url=' + articleUrl
     }).done(function(response){
