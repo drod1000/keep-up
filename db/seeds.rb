@@ -20,8 +20,8 @@ class Seed
   end
 
   def generate_users_and_lists
-    user = create_user
     5.times do
+      user = create_user
       user.lists.create!(
         name:     Faker::Lorem.word
       )
