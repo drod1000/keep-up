@@ -24,7 +24,7 @@ class Article < ApplicationRecord
   def self.combine_mp3s(mp3s)
     mp3s.inject("") do |sum, mp3|
       sum += mp3.string
-      return sum
+      sum
     end
   end
 end
