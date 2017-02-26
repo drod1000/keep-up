@@ -10,15 +10,9 @@ class Article < ApplicationRecord
     attributes = AylienService.extract(url)
     article.update(title: attributes[:title])
     article.update(author: attributes[:author])
-    article.update(body: Article.clean_body(attributes[:article]))
+    article.update(body: TextToSpeech.clean_body(attributes[:article]))
     article.save
     article
-  end
-
-  def self.clean_body(text)
-    text = text.gsub!("\n",'') if text.gsub!("\n",'')
-    binding.pry
-    text
   end
 
   def convert_to_speech

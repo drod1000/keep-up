@@ -1,4 +1,8 @@
 class TextToSpeech
+  def self.clean_body(text)
+    text = text.gsub!("\n",'') if text.gsub!("\n",'')
+    text
+  end
   def self.convert(text)
     streams = text.scan(/.{1,1500}/).map do |piece|
       AwsService.text_to_speech(piece)
