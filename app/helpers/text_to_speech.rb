@@ -1,6 +1,6 @@
 class TextToSpeech
   def self.clean_body(text)
-    text = text.gsub!("\n",'') if text.gsub!("\n",'')
+    text = text.gsub("\n",'') if text.gsub("\n",'')
     text
   end
   def self.convert(text)
