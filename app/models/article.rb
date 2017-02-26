@@ -16,6 +16,10 @@ class Article < ApplicationRecord
   end
 
   def convert_to_speech
-    AwsService.text_to_speech(body)
+    TextToSpeech.convert(body)
+  end
+
+  def export_speech
+    AwsService.export_to_s3(convert_to_speech, id.to_s)
   end
 end

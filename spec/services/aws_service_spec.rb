@@ -6,9 +6,9 @@ RSpec.describe "AWS Service" do
       VCR.use_cassette("AWS Service returns speech given text") do
         text = "This text just got converted to speech!"
 
-        mp3 = AwsService.text_to_speech(text)
+        stream = AwsService.text_to_speech(text)
 
-        expect(mp3.content_type).to eq("audio/mpeg")
+        expect(stream.class).to eq(StringIO)
       end
     end
   end
@@ -19,8 +19,8 @@ RSpec.describe "AWS Service" do
         text = "This text just got converted to speech!"
         name = "test"
 
-        mp3 = AwsService.text_to_speech(text)
-        response = AwsService.export_to_s3(mp3.audio_stream, name)
+        stream = AwsService.text_to_speech(text)
+        response = AwsService.export_to_s3(stream, name)
 
         expect(response[:etag]).to_not be_empty
       end

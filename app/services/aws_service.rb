@@ -8,7 +8,7 @@ class AwsService
       text: text,
       voice_id: "Joanna"
     }
-    client.synthesize_speech(hash)
+    client.synthesize_speech(hash).audio_stream
   end
 
   def self.export_to_s3(mp3, name)
