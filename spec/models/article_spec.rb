@@ -63,27 +63,7 @@ RSpec.describe Article, type: :model do
         article = create(:article)
         mp3 = article.convert_to_speech
 
-        expect(mp3.content_type).to eq("audio/mpeg")
-      end
-    end
-  end
-
-  describe ".combine_mp3s" do
-    VCR.use_cassette("combine multiple mp3s") do
-      it "can combine multiple mp3" do
-        article_1 = create(:article, url: "some_url", body: "Here comes the first sentence")
-        article_2 = create(:article, url: "some_other_url", body: "And if this works here's the second")
-
-        mp3_1 = article_1.convert_to_speech
-        mp3_2 = article_2.convert_to_speech
-
-        mp3s = mp3_1 + mp3_2
-
-        combined = Article.combine_mp3s(mp3s)
-        response = AwsService.export_to_s3(combined, "combine")
-
-        expect(combined.size).to be > mp3_1.first.size
-        expect(combined.size).to be > mp3_2.first.size
+        expect(mp3.class).to eq(String)
       end
     end
   end

@@ -16,15 +16,6 @@ class Article < ApplicationRecord
   end
 
   def convert_to_speech
-    mp3s = body.scan(/.{1,2950}/).map do |piece|
-      AwsService.text_to_speech(piece).audio_stream
-    end
-  end
-
-  def self.combine_mp3s(mp3s)
-    mp3s.inject("") do |sum, mp3|
-      sum += mp3.string
-      sum
-    end
+    TextToSpeech.convert(body)
   end
 end
