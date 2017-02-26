@@ -67,4 +67,18 @@ RSpec.describe Article, type: :model do
       end
     end
   end
+
+  describe "#upload speech" do
+    it "can upload an article to s3" do
+      VCR.use_cassette("article-uploads-speech-s3") do
+        url = "https://www.vice.com/en_us/article/does-the-classic-hero-narrative-have-an-inherent-liberal-bias"
+        list = create(:list)
+        article = Article.create_with_aylien(list, url)
+        
+        response = article.export_speech
+
+        expect(response[:etag]).to_not be_empty
+      end
+    end
+  end
 end

@@ -1,6 +1,6 @@
 class TextToSpeech
   def self.convert(text)
-    streams = text.scan(/.{1,2950}/).map do |piece|
+    streams = text.scan(/.{1,1500}/).map do |piece|
       AwsService.text_to_speech(piece)
     end
     combine_mp3s(streams)
