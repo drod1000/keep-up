@@ -14,14 +14,14 @@ http_interactions:
       User-Agent:
       - aws-sdk-ruby2/2.7.14 ruby/2.3.0 x86_64-darwin15
       X-Amz-Date:
-      - 20170224T215338Z
+      - 20170227T210534Z
       Host:
       - polly.us-east-1.amazonaws.com
       X-Amz-Content-Sha256:
       - d5484070bf6cbe208a456d3fc3e98f038504b49c7f8776d4fb7a6e5b4df31099
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJBPPKHONBXDWBVTQ/20170224/us-east-1/polly/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=28c1871ea2e880993fd2b8dd0855160dd216eca98fe05e887e0b57f56132699a
+      - AWS4-HMAC-SHA256 Credential=<access_key_id/20170227/us-east-1/polly/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=3a8c5d89455f2f1c6678d4a327282a6bf68194e7c5919755738ce19b6eb8eb4a
       Content-Length:
       - '90'
       Accept:
@@ -32,7 +32,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - b2e347f5-fadb-11e6-bca6-458418b13a98
+      - 7af876d9-fd30-11e6-a6e2-1fd5a4edc794
       X-Amzn-Requestcharacters:
       - '39'
       Content-Type:
@@ -40,7 +40,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 24 Feb 2017 21:53:38 GMT
+      - Mon, 27 Feb 2017 21:05:34 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -353,5 +353,5 @@ http_interactions:
         VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
         VVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ==
     http_version: 
-  recorded_at: Fri, 24 Feb 2017 21:53:38 GMT
+  recorded_at: Mon, 27 Feb 2017 21:05:34 GMT
 recorded_with: VCR 3.0.3
