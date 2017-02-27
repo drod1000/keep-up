@@ -31,12 +31,12 @@ form{
     box-sizing: border-box;
 
 
-  tr{
+  tr,ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
 
-    td{
+    td,li{
       width: 100%;
       padding: 20px;
       box-sizing: border-box;
