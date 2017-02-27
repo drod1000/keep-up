@@ -1,3 +1,27 @@
+form{
+
+  input[type="text"]{
+    width: 70%;
+    padding: 20px;
+    background: white;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #989898;
+  }
+
+  button{
+    padding: 20px;
+    width: 30%;
+    float: left;
+    background: #858585;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
 .lists-table, .list-table{
     position: relative;
     width: 95%;
@@ -6,37 +30,13 @@
     padding: 20px;
     box-sizing: border-box;
 
-  form{
 
-    input[type="text"]{
-      width: 70%;
-      padding: 20px;
-      background: white;
-      border: 0;
-      float: left;
-      font-size: 20px;
-      color: #989898;
-    }
-
-    button{
-      padding: 20px;
-      width: 30%;
-      float: left;
-      background: #858585;
-      border: 0;
-      box-sizing: border-box;
-      color: #fff;
-      cursor: pointer;
-      font-size: 20px;
-    }
-  }
-
-  ul{
+  tr{
     list-style-type: none;
     padding: 0;
     margin: 0;
 
-    li{
+    td{
       width: 100%;
       padding: 20px;
       box-sizing: border-box;
@@ -44,6 +44,10 @@
       font-size: 20px;
       cursor: pointer;
       letter-spacing: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
     }
     a{
     color: #ffffff;
