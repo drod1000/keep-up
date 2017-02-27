@@ -1,8 +1,4 @@
 <h1><%= @list.name %></h1>
-<form class="article-form" id="<%= @list.id%>">
-  <input type="text" name="article" placeholder="Add new article..." required />
-  <button type="sub">Add Article</button>
-</form>
 <table class="list-table">
   <tr>
     <th>Article Name</th>
@@ -19,3 +15,7 @@
   </tr>
   <% end %>
 </table>
+<form class="article-form" id="<%= @list.id%>">
+  <input type="text" name="article" placeholder="Add new article..." required />
+  <button type="sub">Add Article</button>
+</form>
