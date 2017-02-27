@@ -14,14 +14,14 @@ http_interactions:
       User-Agent:
       - aws-sdk-ruby2/2.7.14 ruby/2.3.0 x86_64-darwin15
       X-Amz-Date:
-      - 20170225T151540Z
+      - 20170227T210534Z
       Host:
       - polly.us-east-1.amazonaws.com
       X-Amz-Content-Sha256:
       - d5484070bf6cbe208a456d3fc3e98f038504b49c7f8776d4fb7a6e5b4df31099
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJBPPKHONBXDWBVTQ/20170225/us-east-1/polly/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=0ed6df14d34a7efd716b59469f4d851927b5adca44d8fc935803d8bdb3ca07cf
+      - AWS4-HMAC-SHA256 Credential=<access_key_id/20170227/us-east-1/polly/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=3a8c5d89455f2f1c6678d4a327282a6bf68194e7c5919755738ce19b6eb8eb4a
       Content-Length:
       - '90'
       Accept:
@@ -32,7 +32,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - 451d8bbc-fb6d-11e6-bf62-8f9882713fc5
+      - 7b23a58a-fd30-11e6-a6e2-1fd5a4edc794
       X-Amzn-Requestcharacters:
       - '39'
       Content-Type:
@@ -40,7 +40,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Sat, 25 Feb 2017 15:15:41 GMT
+      - Mon, 27 Feb 2017 21:05:34 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -353,7 +353,7 @@ http_interactions:
         VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
         VVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ==
     http_version: 
-  recorded_at: Sat, 25 Feb 2017 15:15:42 GMT
+  recorded_at: Mon, 27 Feb 2017 21:05:34 GMT
 - request:
     method: put
     uri: https://keep-up.s3.amazonaws.com/test
@@ -680,15 +680,15 @@ http_interactions:
       Content-Md5:
       - "+s0u2l0qYkxaCEKzsqBUcg=="
       X-Amz-Date:
-      - 20170225T151542Z
+      - 20170227T210534Z
       Host:
       - keep-up.s3.amazonaws.com
       X-Amz-Content-Sha256:
       - 45ca2d05120c2d22a9e4114a351d3a01aa71ad9980f8aa4214aa308cba001258
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJBPPKHONBXDWBVTQ/20170225/us-east-1/s3/aws4_request,
+      - AWS4-HMAC-SHA256 Credential=<access_key_id/20170227/us-east-1/s3/aws4_request,
         SignedHeaders=content-md5;content-type;host;x-amz-content-sha256;x-amz-date,
-        Signature=1cbbb669e1f5223c21720f2c911766a93cabeca08a172c5f2f45b35b10ae3e88
+        Signature=b084034cc9701712600397d60b8677c30cdada49cc65b207b12f7b500f385279
       Content-Length:
       - '13837'
       Accept:
@@ -699,11 +699,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - p/OPWWfTeOGi6WoPpggRHLlMR422FQKcpMkWbZAzCj8DeMPdCBNQH+JWVFT56wuMd8DWFvJEf18=
+      - oU3Chx5KkAkuf3CX67+5N8i3Wnz9E/x8FMqwavJC6Jg+iWxrB0lYD0c72PHEFkyLSaYKyE8gne8=
       X-Amz-Request-Id:
-      - 25E6DDC793ED8036
+      - 0C608076CA79F167
       Date:
-      - Sat, 25 Feb 2017 15:15:45 GMT
+      - Mon, 27 Feb 2017 21:05:36 GMT
       Etag:
       - '"facd2eda5d2a624c5a0842b3b2a05472"'
       Content-Length:
@@ -714,5 +714,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Sat, 25 Feb 2017 15:15:52 GMT
+  recorded_at: Mon, 27 Feb 2017 21:05:35 GMT
 recorded_with: VCR 3.0.3
