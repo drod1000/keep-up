@@ -10,6 +10,24 @@ VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
   config.hook_into :webmock # or :fakeweb
   config.allow_http_connections_when_no_cassette = true
+  config.filter_sensitive_data('<access_key_id') do |interaction|
+    ENV['AWS_ACCESS_KEY_ID']
+  end
+  config.filter_sensitive_data('<secret_access_key') do |interaction|
+    ENV['AWS_SECRET_ACCESS_KEY']
+  end
+  config.filter_sensitive_data('<app_id') do |interaction|
+    ENV['AYLIEN_APP_ID']
+  end
+  config.filter_sensitive_data('<app_key') do |interaction|
+    ENV['AYLIEN_APP_KEY']
+  end
+  config.filter_sensitive_data('<client_id') do |interaction|
+    ENV['GOOGLE_CLIENT_ID']
+  end
+  config.filter_sensitive_data('<client_secret') do |interaction|
+    ENV['GOOGLE_CLIENT_SECRET']
+  end
 end
 # Add additional requires below this line. Rails is not loaded until this point!
 
