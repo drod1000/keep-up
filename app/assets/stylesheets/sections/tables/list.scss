@@ -1,52 +1,65 @@
 .lists-table, .list-table{
     position: relative;
-    width: 95%;
+    width: 100%;
     background: #c1bdbd;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
 
-  form{
-
-    input[type="text"]{
-      width: 70%;
-      padding: 20px;
-      background: white;
-      border: 0;
-      float: left;
-      font-size: 20px;
-      color: #989898;
-    }
-
-    button{
-      padding: 20px;
-      width: 30%;
-      float: left;
-      background: #858585;
-      border: 0;
-      box-sizing: border-box;
-      color: #fff;
-      cursor: pointer;
-      font-size: 20px;
-    }
+  th{
+    width: 100%;
+    padding: 4%;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #858585;
+    text-align: center;
+    border-style: solid;
   }
 
-  ul{
+  tr,ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
 
-    li{
+    td,li{
       width: 100%;
       padding: 20px;
       box-sizing: border-box;
-      font-family: arial;
-      font-size: 20px;
+      font-size: 125%;
       cursor: pointer;
       letter-spacing: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      border-style: solid;
     }
     a{
     color: #ffffff;
     }
+  }
+}
+form{
+
+  input[type="text"]{
+    width: 78.5%;
+    padding: 20px;
+    background: white;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #858585;
+  }
+
+  button{
+    padding: 20px;
+    width: 21.5%;
+    float: left;
+    background: #858585;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
   }
 }

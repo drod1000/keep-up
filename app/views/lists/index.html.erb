@@ -1,12 +1,17 @@
 <h1>All Lists</h1>
-<div class="lists-table">
-  <form class=list-form>
+<table class="lists-table">
+  <tr>
+    <th>List Name</th>
+    <th># of Articles</th>
+  </tr>
+  <% current_user.lists.each do |list| %>
+    <tr>
+      <td><%= link_to list.name, user_list_path(current_user, list) %></td>
+      <td><%= list.articles.count %></td>
+    </tr>
+  <% end %>
+</table>
+<form class=list-form>
   <input type="text" name="list" placeholder="Add new list..." required />
-    <button type="sub">Add List</button>
-  </form>
-  <ul>
-    <% current_user.lists.each do |list| %>
-      <li><%= link_to list.name, user_list_path(current_user, list) %></li>
-    <% end %>
-  </ul>
-</div>
+  <button type="sub">Add List</button>
+</form>

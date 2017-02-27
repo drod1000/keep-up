@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "sections/tables/list";
+@import "pages/home";
+
+html *{
+  font-family: 'Abril Fatface', cursive;
+}
 
 body{
   background: skyblue;
@@ -8,8 +13,8 @@ body{
   color: #fff;
   padding: 30px;
 }
+
 h1{
-  font-family: 'Abril Fatface', cursive;
   font-size: 48px;
   font-weight: bold;
   text-transform: uppercase;
