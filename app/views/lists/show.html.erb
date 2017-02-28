@@ -2,11 +2,13 @@
 <table class="list-table">
   <tr>
     <th>Article Name</th>
+    <th>Points</th>
     <th>Audio</th>
   </tr>
   <% @list.articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
+    <td><%= article.get_likes.count - article.get_dislikes.count %>
     <td>
       <audio controls>
         <source src="https://s3.amazonaws.com/keep-up/<%=article.id %>" type="audio/mpeg">
