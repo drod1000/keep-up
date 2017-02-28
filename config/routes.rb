@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       resources :lists, only: [:create]
       resources :articles, only: [:create] do
         post '/like', to: 'articles#like'
+        post '/dislike', to: 'articles#dislike'
       end
     end
   end

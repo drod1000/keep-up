@@ -10,4 +10,9 @@ class Api::V1::ArticlesController < Api::V1::BaseController
     article = Article.find(params[:article_id])
     article.liked_by current_user
   end
+
+  def dislike
+    article = Article.find(params[:article_id])
+    article.disliked_by current_user
+  end
 end
