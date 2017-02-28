@@ -5,6 +5,8 @@ class Article < ApplicationRecord
   has_many :list_articles, dependent: :destroy
   has_many :lists, through: :list_articles
 
+  acts_as_votable
+
   def self.create_with_aylien(list, url)
     article = list.articles.create(url: url)
     attributes = AylienService.extract(url)

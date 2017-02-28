@@ -1,6 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
+  describe "attributes" do
+    it "acts as votable" do
+      article = create(:article)
+      user = create(:user)
+
+      article.liked_by user
+
+      expect(article.votes_for.count).to eq(1)
+    end
+  end
   describe "validations" do
     context "invalid attributes" do
       it "is invalid without a url" do
