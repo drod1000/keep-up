@@ -21,4 +21,19 @@ describe "Articles API" do
       expect(created_article.url).to eq(url)
     end
   end
+
+  it "can like an article" do
+    user = create(:user)
+    article = create(:article)
+
+    allow_any_instance_of(Api::V1::ArticlesController).to receive(:current_user).and_return(user)
+
+    post "/api/v1/articles/#{article.id}/liked"
+
+    expect(response).to be_success
+    expect(response.status).to eq(201)
+
+    expect(article.votes_for.count).to eq(1)
+    expect(user.votes.up.count).to eq(1)
+  end
 end
