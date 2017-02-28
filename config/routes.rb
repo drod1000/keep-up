@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :lists, only: [:create]
       resources :articles, only: [:create] do
-        post '/liked', to: 'articles#liked'
+        post '/like', to: 'articles#like'
       end
     end
   end

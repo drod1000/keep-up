@@ -6,7 +6,7 @@ class Api::V1::ArticlesController < Api::V1::BaseController
     render json: @article, :status => 201
   end
 
-  def liked
+  def like
     article = Article.find(params[:article_id])
     article.liked_by current_user
   end
