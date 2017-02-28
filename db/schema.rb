@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228213650) do
+ActiveRecord::Schema.define(version: 20170228222025) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,16 @@ ActiveRecord::Schema.define(version: 20170228213650) do
     t.string   "title"
     t.string   "author"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "cached_votes_total", default: 0
+    t.integer  "cached_votes_score", default: 0
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "cached_votes_down",  default: 0
+    t.index ["cached_votes_down"], name: "index_articles_on_cached_votes_down", using: :btree
+    t.index ["cached_votes_score"], name: "index_articles_on_cached_votes_score", using: :btree
+    t.index ["cached_votes_total"], name: "index_articles_on_cached_votes_total", using: :btree
+    t.index ["cached_votes_up"], name: "index_articles_on_cached_votes_up", using: :btree
   end
 
   create_table "list_articles", force: :cascade do |t|
