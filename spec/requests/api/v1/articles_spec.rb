@@ -31,9 +31,8 @@ describe "Articles API" do
     post "/api/v1/articles/#{article.id}/liked"
 
     expect(response).to be_success
-    expect(response.status).to eq(201)
 
     expect(article.votes_for.count).to eq(1)
-    expect(user.votes.up.count).to eq(1)
+    expect(user.voted_for? article).to be_truthy
   end
 end

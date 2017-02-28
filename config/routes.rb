@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :lists, only: [:create]
-      resources :articles, only: [:create]
+      resources :articles, only: [:create] do
+        post '/liked', to: 'articles#liked'
+      end
     end
   end
 end
