@@ -31,6 +31,7 @@ describe "Articles API" do
     post "/api/v1/articles/#{article.id}/like"
 
     expect(response).to be_success
+    expect(response.status).to eq(201)
 
     expect(article.votes_for.count).to eq(1)
     expect(user.likes article).to be_truthy
@@ -45,6 +46,7 @@ describe "Articles API" do
     post "/api/v1/articles/#{article.id}/dislike"
 
     expect(response).to be_success
+    expect(response.status).to eq(201)
 
     expect(article.votes_for.count).to eq(1)
     expect(user.dislikes article).to be_truthy
