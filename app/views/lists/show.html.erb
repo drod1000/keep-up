@@ -9,10 +9,10 @@
   <tr>
     <td><%= article.title %></td>
     <td><%= article.cached_votes_score %>
-      <button>
+      <button class="like-button" id="<%= article.id %>">
         Like
       </button>
-      <button>
+      <button class="dislike-button" id="<%= article.id %>">
         Dislike
       </button>
     </td>
