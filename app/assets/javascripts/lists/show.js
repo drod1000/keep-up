@@ -25,4 +25,17 @@ $(document).ready(function(){
       location.reload();
     });
   });
+
+  $('.dislike-button').on('click', function(){
+    event.preventDefault();
+    var articleId = $(this).attr('id');
+    var url = '/api/v1/articles/' + articleId
+
+    return $.ajax({
+      type: 'POST',
+      url: '/api/v1/articles/' + articleId + '/dislike'
+    }).done(function(response){
+      location.reload();
+    });
+  });
 });
