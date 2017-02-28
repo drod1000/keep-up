@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "When a user visits user_list show page", js: true do
-  it "they can like an article" do
+  it "they can dislike an article" do
     user = create(:user)
     list = create(:list, user: user)
     list.articles << create(:article)
@@ -10,7 +10,7 @@ describe "When a user visits user_list show page", js: true do
 
     visit user_list_path(user.id, list.id)
 
-    click_on("Like")
+    click_on("Dislike")
 
     sleep 2
 
@@ -18,7 +18,7 @@ describe "When a user visits user_list show page", js: true do
 
     within("tr:nth-of-type(2)") do
       within("td:nth-of-type(2)") do
-        expect(page).to have_content("1")
+        expect(page).to have_content("-1")
       end
     end
   end
