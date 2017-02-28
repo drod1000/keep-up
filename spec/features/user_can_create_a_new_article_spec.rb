@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "When a user visits user_list show page" do
+describe "When a user visits user_list show page", js: true do
   it "they can create a new article" do
     user = create(:user)
     list = create(:list, user: user)
