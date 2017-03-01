@@ -2,6 +2,7 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav navbar-left">
       <% if current_user %>
+        <li><%= link_to "Profile", user_path(current_user) %></li>
         <li><%= link_to "My Lists", user_lists_path(current_user) %></li>
       <% end %>
     </ul>
@@ -10,8 +11,6 @@
       <% if current_user %>
         <li>Logged in as <%= current_user.first_name %></li>
         <li><%= link_to "Logout", logout_path, method: "DELETE" %></li>
-      <% else %>
-        <li><%= link_to "Login with Google", google_login_path %></li>
       <% end %>
     </ul>
   </div>

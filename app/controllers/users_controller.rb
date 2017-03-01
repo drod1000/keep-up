@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    if current_user.id == params[:user_id].to_i
+    if current_user && params[:id].to_i == current_user.id
       render :show
     else
       render file: "/public/404"
