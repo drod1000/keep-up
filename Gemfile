@@ -36,6 +36,7 @@ gem 'aylien_text_api'
 gem 'aws-sdk'
 gem 'omniauth-google-oauth2'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'sidekiq'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
