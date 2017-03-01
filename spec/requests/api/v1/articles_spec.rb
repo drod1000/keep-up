@@ -21,4 +21,34 @@ describe "Articles API" do
       expect(created_article.url).to eq(url)
     end
   end
+
+  it "can like an article" do
+    user = create(:user)
+    article = create(:article)
+
+    allow_any_instance_of(Api::V1::ArticlesController).to receive(:current_user).and_return(user)
+
+    post "/api/v1/articles/#{article.id}/like"
+
+    expect(response).to be_success
+    expect(response.status).to eq(201)
+
+    expect(article.votes_for.count).to eq(1)
+    expect(user.likes article).to be_truthy
+  end
+
+  it "can dislike an article" do
+    user = create(:user)
+    article = create(:article)
+
+    allow_any_instance_of(Api::V1::ArticlesController).to receive(:current_user).and_return(user)
+
+    post "/api/v1/articles/#{article.id}/dislike"
+
+    expect(response).to be_success
+    expect(response.status).to eq(201)
+
+    expect(article.votes_for.count).to eq(1)
+    expect(user.dislikes article).to be_truthy
+  end
 end

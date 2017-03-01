@@ -2,11 +2,20 @@
 <table class="list-table">
   <tr>
     <th>Article Name</th>
+    <th>Points</th>
     <th>Audio</th>
   </tr>
   <% @list.articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
+    <td><%= article.cached_votes_score %>
+      <button class="like-button" id="<%= article.id %>">
+        Like
+      </button>
+      <button class="dislike-button" id="<%= article.id %>">
+        Dislike
+      </button>
+    </td>
     <td>
       <audio controls>
         <source src="https://s3.amazonaws.com/keep-up/<%=article.id %>" type="audio/mpeg">

@@ -5,4 +5,16 @@ class Api::V1::ArticlesController < Api::V1::BaseController
     @article.export_speech
     render json: @article, :status => 201
   end
+
+  def like
+    article = Article.find(params[:article_id])
+    article.liked_by current_user
+    render :nothing => true, :status => 201
+  end
+
+  def dislike
+    article = Article.find(params[:article_id])
+    article.disliked_by current_user
+    render :nothing => true, :status => 201
+  end
 end

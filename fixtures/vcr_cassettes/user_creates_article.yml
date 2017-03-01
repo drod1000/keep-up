@@ -1,0 +1,2015 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://127.0.0.1:63143/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+      Date:
+      - Tue, 28 Feb 2017 23:46:07 GMT
+      Content-Length:
+      - '14'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70233283427820'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session
+    body:
+      encoding: UTF-8
+      string: '{"desiredCapabilities":{"browserName":"chrome","version":"","platform":"ANY","javascriptEnabled":true,"cssSelectorsEnabled":true,"takesScreenshot":false,"nativeEvents":false,"rotatable":false,"loggingPrefs":{"browser":"ALL","driver":"ALL"},"chromeOptions":{"detach":true},"chrome.detach":true}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '294'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '794'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":{"acceptSslCerts":true,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"browserName":"chrome","chrome":{"chromedriverVersion":"2.27.440174
+        (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9)","userDataDir":"/var/folders/kr/d0q4bhz17hl6tcp16ktr8cdw0000gn/T/.org.chromium.Chromium.nmSSxG"},"cssSelectorsEnabled":true,"databaseEnabled":false,"handlesAlerts":true,"hasTouchScreen":false,"javascriptEnabled":true,"locationContextEnabled":true,"mobileEmulationEnabled":false,"nativeEvents":true,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platform":"Mac
+        OS X","rotatable":false,"takesHeapSnapshot":true,"takesScreenshot":true,"unexpectedAlertBehaviour":"","version":"56.0.2924.87","webStorageEnabled":true}}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:08 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:63143/rack_session/edit"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '50'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '103'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":[{"ELEMENT":"0.615099044129193-1"}]}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-1/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-1/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '162'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"Update
+        rack session\nPut marshalized and encoded with base64 ruby hash into the form\n      "}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''data'' or ./@name
+        = ''data'') or ./@placeholder = ''data'') or ./@id = //label[normalize-space(string(.))
+        = ''data'']/@for)] | .//label[normalize-space(string(.)) = ''data'']//.//*[self::input
+        | self::textarea][not(./@type = ''submit'' or ./@type = ''image'' or ./@type
+        = ''radio'' or ./@type = ''checkbox'' or ./@type = ''hidden'' or ./@type =
+        ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '542'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '103'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":[{"ELEMENT":"0.615099044129193-2"}]}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-2/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-2/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-2/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '78'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"textarea"}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-2/attribute/type
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '78'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"textarea"}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-2/attribute/readonly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/execute
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"ELEMENT":"0.615099044129193-2","element-6066-11e4-a52e-4f735466cecf":"0.615099044129193-2"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '139'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-2/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["BAh7BjoMdXNlcl9pZGkG\n"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//input[./@type = ''submit'' or ./@type
+        = ''reset'' or ./@type = ''image'' or ./@type = ''button''][((./@id = ''Update''
+        or ./@value = ''Update'') or ./@title = ''Update'')] | .//input[./@type =
+        ''image''][./@alt = ''Update''] | .//button[((((./@id = ''Update'' or ./@value
+        = ''Update'') or ./@title = ''Update'') or normalize-space(string(.)) = ''Update'')
+        or .//img[./@alt = ''Update''])] | .//input[./@type = ''image''][./@alt =
+        ''Update'']"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '440'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '103'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":[{"ELEMENT":"0.615099044129193-3"}]}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-3/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-3/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.615099044129193-3/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '105'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":[{"ELEMENT":"0.10649787830557655-1"}]}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.10649787830557655-1/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.10649787830557655-1/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '165'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"Rack
+        session data\n\"session_id\" : \"e543f8b5b5f4fe92eb3892dfbd87e287\"\n\"user_id\"
+        : 1\nEdit"}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:09 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:63143/users/1/lists/1"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '48'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''article'' or
+        ./@name = ''article'') or ./@placeholder = ''article'') or ./@id = //label[normalize-space(string(.))
+        = ''article'']/@for)] | .//label[normalize-space(string(.)) = ''article'']//.//*[self::input
+        | self::textarea][not(./@type = ''submit'' or ./@type = ''image'' or ./@type
+        = ''radio'' or ./@type = ''checkbox'' or ./@type = ''hidden'' or ./@type =
+        ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '557'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":[{"ELEMENT":"0.9110033976575125-1"}]}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-1/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-1/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-1/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"input"}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-1/attribute/type
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"text"}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-1/attribute/readonly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/execute
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"ELEMENT":"0.9110033976575125-1","element-6066-11e4-a52e-4f735466cecf":"0.9110033976575125-1"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '141'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-1/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["http://www.bbc.com/future/story/20150402-the-worst-place-on-earth"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '79'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//a[./@href][(((./@id = ''Add Article''
+        or normalize-space(string(.)) = ''Add Article'') or ./@title = ''Add Article'')
+        or .//img[./@alt = ''Add Article''])] | .//input[./@type = ''submit'' or ./@type
+        = ''reset'' or ./@type = ''image'' or ./@type = ''button''][((./@id = ''Add
+        Article'' or ./@value = ''Add Article'') or ./@title = ''Add Article'')] |
+        .//input[./@type = ''image''][./@alt = ''Add Article''] | .//button[((((./@id
+        = ''Add Article'' or ./@value = ''Add Article'') or ./@title = ''Add Article'')
+        or normalize-space(string(.)) = ''Add Article'') or .//img[./@alt = ''Add
+        Article''])] | .//input[./@type = ''image''][./@alt = ''Add Article'']"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '643'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":[{"ELEMENT":"0.9110033976575125-2"}]}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-2/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-2/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '76'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"button"}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-2/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-2/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:10 GMT
+- request:
+    method: post
+    uri: https://api.aylien.com/api/v1/extract
+    body:
+      encoding: US-ASCII
+      string: url=http%3A%2F%2Fwww.bbc.com%2Ffuture%2Fstory%2F20150402-the-worst-place-on-earth
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Aylien Text API Ruby Gem 0.7.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Aylien-Textapi-Application-Id:
+      - "<app_id"
+      X-Aylien-Textapi-Application-Key:
+      - "<app_key"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty/1.9.3.2
+      Date:
+      - Tue, 28 Feb 2017 23:46:12 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '281'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit:
+      - '1000'
+      X-Ratelimit-Remaining:
+      - '996'
+      X-Ratelimit-Reset:
+      - '1488326400'
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJhdXRob3IiOiAiVGltIE1hdWdoYW4iLAogICJpbWFnZSI6ICIiLAog
+        ICJ0YWdzIjogWyJzdG9yeSIsICJnYWRnZXQiLCAiU1RPUlkiLCAiaW4tZGVw
+        dGgiLCAiaW1hZ2UiLCAicG9sbHV0aW9uIl0sCiAgImFydGljbGUiOiAiSXQn
+        cyBub3Qgd2hlcmUgeW91J2QgZXhwZWN0IiwKICAidmlkZW9zIjogW10sCiAg
+        InRpdGxlIjogIlRoZSBkeXN0b3BpYW4gbGFrZSBmaWxsZWQgYnkgdGhlIHdv
+        cmxk4oCZcyB0ZWNoIGx1c3QiLAogICJwdWJsaXNoRGF0ZSI6ICIiLAogICJm
+        ZWVkcyI6IFtdCn0=
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:11 GMT
+- request:
+    method: post
+    uri: https://polly.us-east-1.amazonaws.com/v1/speech
+    body:
+      encoding: UTF-8
+      string: '{"OutputFormat":"mp3","Text":"It''s not where you''d expect","VoiceId":"Joanna"}'
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.7.14 ruby/2.3.0 x86_64-darwin15
+      X-Amz-Date:
+      - 20170228T234611Z
+      Host:
+      - polly.us-east-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - bd2b5c24af34345759fee323c2138a647562205be05a825eff33586067ca6974
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=<access_key_id/20170228/us-east-1/polly/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=c74ea96a246a235ca695e37838389fbb347ce28f7c109d6b24333c3e105006b8
+      Content-Length:
+      - '78'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - 15c458f9-fe10-11e6-8d96-25e8892a404e
+      X-Amzn-Requestcharacters:
+      - '27'
+      Content-Type:
+      - audio/mpeg
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 Feb 2017 23:46:11 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        nzgwPXiGTxObDlAAoDU6fYPFx6dP3ZMacZoUdY42nngeWYUreRADDqoBCRRe
+        I3WFqn////+NJfE59YRBkBj9epTQCdDTav/zYsR+H7lCuxzD2HQlAAEbcI3E
+        F+6OMA2UWJhbphcU7ZBpKW9hqUwqxrGxzW6XLdwPg9NSg+RcaDVrsbMiAGCw
+        96EEFpvXBUJERd0nyMEYQWkc0/czxLd6c18VC1yq7W19z/315x55MW6ZQSNn
+        EGUfucxiokfODSAFO7OKKCgc/Vlg4lRJAAQe31vm3bTpmU0LqEuBTD4EF3rA
+        ahH/82DEjx3x7qZPWUAAnawMZD6iICJa4rZfigMylolIrxIaTpUMAwyFx2eC
+        U2opYSxxGslrLI9xAVCFnAc4S2O6kUZLc73eh1uw1aDZENip1ifQ+ySPqseY
+        kJWYcFOz1zSkZW1zWFLWWe0Ofu3OI5vIisgv2vMONEtqXUK27ZpnOt33TH/6
+        Fwi5tygTjJf38eSlf//n/D6W14v3////82LEpjRL/p5fmHgBG//9Zw83/mPl
+        /v7zuPij2vzXUGn9dV/z/////////////jX/9/j018xy8qoAACAYLFyNSDVk
+        ZquTgaA1oDTsZAIQUgHkzNKQ3FLTKBNdNzyhaHRpLAH0P4GCuGp2X1PPYChO
+        FDYeGVcN7HBZUzCeruHhYZ7Lk7SiURtTwGJOE5ltg5zqOth54DciOSicn6hX
+        //NixGQ4bAamV5l4AWoZxSiSF/WC8QW9nb8RM+Dnyb1GjNsFwZlizlW8jjHY
+        /K8XDac93KkCsaN95fv4TNimr/M22ZlU7PEl1Tf7//+L7WtvxnBng6//8LPr
+        v32w0///+N0t8ak1e+ZqYjX3/usHED/eqOe/8b1//quYcf2xrs1tf1r/i/kh
+        +TKKNUA3JYIPXZezAoRmsoyRZAHJDf/zYsQSH+vera/POAAekzjSZrPo+qK5
+        mtGq91BJHI5rGqYbUippE55UtXoRzWNKBMDmUDRE4fCU6KQciSXInP/O90e8
+        2cdO/U3841jqOOmjxKi9Ddk36f///0d/Nmq2bQ00xDmOJiTOXN///+h1tDDn
+        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
+        8jX89D6czgfU41oZV/699Op3IMxp6n9NcpEaIIqYyb740msgR+hcXt7++uhq
+        ig8WFipVJauLHWOXkrNtRIfeUTgmdMuelxWLVG0PHq4AVCriKUyYzRE5Wlg+
+        wwaZItb/82LEEyETNomhySgAtQrVGZw6YVcVEBowRYVSY1EUzmEhcKBwMVDl
+        nJGD/VHKLCIdEn5epVFVL0MhjNNzS0cxkVDKmcj6Gf/QWAUBAY5BoFcVCxQS
+        Ew4AJHYa39Q6OEhd6jB/1FDJQPOHWlN/0DzyLodlixZpEso8enSrO2VqhCV0
+        g/8qyKBIllSceEgx4EpItFyMEtreduVslo/1//NgxB4cAr5dijCNjK/pq8on
+        L/9WRnyo6K7mozcMYMcBR7o+1WmflbqX7zVLNKpUFUNT/6lCsBPM5wZaNPLm
+        y2z///5mW1iSVHsJA08RB2dBp+Iniru18KvxE2IljOslA/JEmFRG5Yp///+s
+        VFBI+LCrvxVuLC//1Cwr+sVFjQFFRQWFmqFTICFhdlYqLflhYVd6AKFRbFhc
+        VMmR//NixD0RaAGtVghE3GFdYo2aFW0gtUxBTUUzLjk5LjVVVVVVVVVVVVVV
+        VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+        VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+        VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ==
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:12 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '108'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"http://127.0.0.1:63143/users/1/lists/1"}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":[{"ELEMENT":"0.9110033976575125-3"}]}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-3/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-3/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '179'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"My
+        Lists\nLogged in as Angeline\nLogout\nHUMAN IMPLEMENTATION LIAISON\nArticle
+        Name Points Audio\nAdd Article"}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":[{"ELEMENT":"0.9110033976575125-3"}]}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.9110033976575125-3/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/execute
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].textContent","args":[{"ELEMENT":"0.9110033976575125-3","element-6066-11e4-a52e-4f735466cecf":"0.9110033976575125-3"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '149'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '355'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":"\n    KeepUp\n    \n    \n    \n    \n  \n\n  \n    \n  \n    \n        My
+        Lists\n    \n\n    \n        Logged in as Angeline\n        Logout\n    \n  \n\n\n    \n\n\n    Human
+        Implementation Liaison\n\n  \n    Article Name\n    Points\n    Audio\n  \n\n\n  \n  Add
+        Article\n\n\n  \n\n"}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: put
+    uri: https://keep-up.s3.amazonaws.com/1
+    body:
+      encoding: UTF-8
+      string: !binary |-
+        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
+        nzgwPXiGTxObDlAAoDU6fYPFx6dP3ZMacZoUdY42nngeWYUreRADDqoBCRRe
+        I3WFqn////+NJfE59YRBkBj9epTQCdDTav/zYsR+H7lCuxzD2HQlAAEbcI3E
+        F+6OMA2UWJhbphcU7ZBpKW9hqUwqxrGxzW6XLdwPg9NSg+RcaDVrsbMiAGCw
+        96EEFpvXBUJERd0nyMEYQWkc0/czxLd6c18VC1yq7W19z/315x55MW6ZQSNn
+        EGUfucxiokfODSAFO7OKKCgc/Vlg4lRJAAQe31vm3bTpmU0LqEuBTD4EF3rA
+        ahH/82DEjx3x7qZPWUAAnawMZD6iICJa4rZfigMylolIrxIaTpUMAwyFx2eC
+        U2opYSxxGslrLI9xAVCFnAc4S2O6kUZLc73eh1uw1aDZENip1ifQ+ySPqseY
+        kJWYcFOz1zSkZW1zWFLWWe0Ofu3OI5vIisgv2vMONEtqXUK27ZpnOt33TH/6
+        Fwi5tygTjJf38eSlf//n/D6W14v3////82LEpjRL/p5fmHgBG//9Zw83/mPl
+        /v7zuPij2vzXUGn9dV/z/////////////jX/9/j018xy8qoAACAYLFyNSDVk
+        ZquTgaA1oDTsZAIQUgHkzNKQ3FLTKBNdNzyhaHRpLAH0P4GCuGp2X1PPYChO
+        FDYeGVcN7HBZUzCeruHhYZ7Lk7SiURtTwGJOE5ltg5zqOth54DciOSicn6hX
+        //NixGQ4bAamV5l4AWoZxSiSF/WC8QW9nb8RM+Dnyb1GjNsFwZlizlW8jjHY
+        /K8XDac93KkCsaN95fv4TNimr/M22ZlU7PEl1Tf7//+L7WtvxnBng6//8LPr
+        v32w0///+N0t8ak1e+ZqYjX3/usHED/eqOe/8b1//quYcf2xrs1tf1r/i/kh
+        +TKKNUA3JYIPXZezAoRmsoyRZAHJDf/zYsQSH+vera/POAAekzjSZrPo+qK5
+        mtGq91BJHI5rGqYbUippE55UtXoRzWNKBMDmUDRE4fCU6KQciSXInP/O90e8
+        2cdO/U3841jqOOmjxKi9Ddk36f///0d/Nmq2bQ00xDmOJiTOXN///+h1tDDn
+        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
+        8jX89D6czgfU41oZV/699Op3IMxp6n9NcpEaIIqYyb740msgR+hcXt7++uhq
+        ig8WFipVJauLHWOXkrNtRIfeUTgmdMuelxWLVG0PHq4AVCriKUyYzRE5Wlg+
+        wwaZItb/82LEEyETNomhySgAtQrVGZw6YVcVEBowRYVSY1EUzmEhcKBwMVDl
+        nJGD/VHKLCIdEn5epVFVL0MhjNNzS0cxkVDKmcj6Gf/QWAUBAY5BoFcVCxQS
+        Ew4AJHYa39Q6OEhd6jB/1FDJQPOHWlN/0DzyLodlixZpEso8enSrO2VqhCV0
+        g/8qyKBIllSceEgx4EpItFyMEtreduVslo/1//NgxB4cAr5dijCNjK/pq8on
+        L/9WRnyo6K7mozcMYMcBR7o+1WmflbqX7zVLNKpUFUNT/6lCsBPM5wZaNPLm
+        y2z///5mW1iSVHsJA08RB2dBp+Iniru18KvxE2IljOslA/JEmFRG5Yp///+s
+        VFBI+LCrvxVuLC//1Cwr+sVFjQFFRQWFmqFTICFhdlYqLflhYVd6AKFRbFhc
+        VMmR//NixD0RaAGtVghE3GFdYo2aFW0gtUxBTUUzLjk5LjVVVVVVVVVVVVVV
+        VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+        VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+        VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ==
+    headers:
+      Content-Type:
+      - audio/mpeg
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.7.14 ruby/2.3.0 x86_64-darwin15
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - "/6MPLWCGmWghzrt8rDow+g=="
+      X-Amz-Date:
+      - 20170228T234612Z
+      Host:
+      - keep-up.s3.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 6f58f99ad036c3731b929ddef1f8814ad086d5d3ad0ace67876c550016d2141b
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=<access_key_id/20170228/us-east-1/s3/aws4_request,
+        SignedHeaders=content-md5;content-type;host;x-amz-content-sha256;x-amz-date,
+        Signature=c27f76e03c23c5d371e7291f406d8d800d8f0f8aef4bfec2db13470c0445da47
+      Content-Length:
+      - '8665'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - 2c9mNw6maaoa48T4e0zqtbOOpU2uzw6UeHVlR5NNwZIcrBoJ+bcFvDg6djClnehCTd8R56sL/zk=
+      X-Amz-Request-Id:
+      - 73CCE028BB582D43
+      Date:
+      - Tue, 28 Feb 2017 23:46:13 GMT
+      Etag:
+      - '"ffa30f2d6086996821cebb7cac3a30fa"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":[{"ELEMENT":"0.2724496854357401-1"}]}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.2724496854357401-1/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3c067eb5e577cc7cbc30afb1da26850b","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/3c067eb5e577cc7cbc30afb1da26850b/element/0.2724496854357401-1/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '248'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJzZXNzaW9uSWQiOiIzYzA2N2ViNWU1NzdjYzdjYmMzMGFmYjFkYTI2ODUw
+        YiIsInN0YXR1cyI6MCwidmFsdWUiOiJNeSBMaXN0c1xuTG9nZ2VkIGluIGFz
+        IEFuZ2VsaW5lXG5Mb2dvdXRcbkhVTUFOIElNUExFTUVOVEFUSU9OIExJQUlT
+        T05cbkFydGljbGUgTmFtZSBQb2ludHMgQXVkaW9cblRoZSBkeXN0b3BpYW4g
+        bGFrZSBmaWxsZWQgYnkgdGhlIHdvcmxk4oCZcyB0ZWNoIGx1c3QgMCBMaWtl
+        IERpc2xpa2VcbkFkZCBBcnRpY2xlIn0=
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 23:46:13 GMT
+recorded_with: VCR 3.0.3

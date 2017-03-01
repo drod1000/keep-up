@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :lists, dependent: :destroy
   has_many :articles, through: :lists
 
+  acts_as_voter
+
   def self.find_or_create_by_oauth(oauth_data)
     user = User.find_by(email: oauth_data[:email])
     return user if user
