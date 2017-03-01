@@ -11,11 +11,4 @@ class AddCachedVotesToArticles < ActiveRecord::Migration[5.0]
 
     Article.find_each(&:update_cached_votes)
   end
-
-  def self.down
-    remove_column :articles, :cached_votes_total
-    remove_column :articles, :cached_votes_score
-    remove_column :articles, :cached_votes_up
-    remove_column :articles, :cached_votes_down
-  end
 end
