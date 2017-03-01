@@ -20,6 +20,27 @@ describe "When a user visits user_list show page" do
         expect(page).to have_content("The dystopian lake filled by the world’s tech lust")
       end
     end
+
+    context "article already exists" do
+      it "article will be added to list without API call", js: true do
+        user = create(:user)
+        list = create(:list, user: user)
+        article = create(:article)
+
+        page.set_rack_session(user_id: user.id)
+
+        visit user_list_path(user.id, list.id)
+
+        fill_in 'article', :with => article.url
+        click_on("Add Article")
+
+        sleep 2
+
+        expect(current_path).to eq(user_list_path(user.id, list.id))
+        expect(page).to have_content(article.title)
+        expect(Article.count).to eq(1)
+      end
+    end
   end
 
   context "unauthenticated user" do
