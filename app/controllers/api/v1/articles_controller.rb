@@ -7,7 +7,7 @@ class Api::V1::ArticlesController < Api::V1::BaseController
       render json: @article, :status => 201
     else
       @article = Article.create_with_aylien(list, params[:url])
-      @article.export_speech
+      ExportJob.perform_later(@article)
       render json: @article, :status => 201
     end
   end
