@@ -16,6 +16,9 @@
 # Ignore coverage
 coverage
 
+# Ignore redis dumb
+dump.rb
+
 # Ignore Byebug command history file.
 .byebug_history
 
